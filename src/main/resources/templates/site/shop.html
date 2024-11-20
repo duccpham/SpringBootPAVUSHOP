@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="M_Adnan">
+<title>PAVSHOP - SHOP</title>
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/ionicons.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<!-- JavaScripts -->
+<script src="js/modernizr.js"></script>
+
+<!-- Online Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="position-center-center">
+    <div class="ldr"></div>
+  </div>
+</div>
+
+<!-- Wrap -->
+<div id="wrap"> 
+  
+  <!-- header -->
+  <header th:replace="~{/site/fragments/header :: header}"></header>
+  
+  <!--======= SUB BANNER =========-->
+  <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+        <h4>PAVSHOP PRODUCTS</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</p>
+      
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- Products -->
+    <section class="shop-page padding-top-100 padding-bottom-100">
+      <div class="container">
+        <div class="row"> 
+          
+          <!-- Shop SideBar -->
+          <div class="col-sm-3">
+            <div class="shop-sidebar"> 
+              
+              <!-- Category -->
+              <h5 class="shop-tittle margin-bottom-30">category</h5>
+              <ul class="shop-cate">
+                <li th:each="item : ${coutnProductByCategory}">
+                	<a th:href="@{/productByCategory(id=${item[0]})}"> [[${item[1]}]] <span>([[${item[2]}]])</span></a>
+                </li>
+              </ul>
+                            
+              <!-- BRAND -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">brands</h5>
+              <ul class="shop-cate">
+                <li th:each="item : ${brandList}">
+                	<a th:href="@{/productByBrand(id=${item.brandId})}">[[${item.brandName}]] </a>
+                  </li>
+              </ul>
+
+            </div>
+          </div>
+          
+          <!-- Item Content -->
+          <div class="col-sm-9">
+            <div class="item-display">
+              <div class="row">
+                <div class="col-xs-6"> <span class="product-num">Showing 1 - 9 products</span> </div>
+               
+              </div>
+            </div>
+            
+            <!-- Popular Item Slide -->
+            <div class="papular-block row"> 
+            
+              <!-- Item -->
+              <div class="col-md-4" th:each="item : ${productList}">
+                <div class="item">
+                  <!-- Sale Tags -->
+                  <div class="on-sale"> [[${#numbers.formatDecimal(item.discount, 1, 'DEFAULT', 0, 'DEFAULT')} + '%']]  <span>OFF</span></div>
+                  <!-- Item img -->
+                  <div class="item-img">
+	                  <img class="img-1" th:src="@{'/loadImage?imageName='+${item.image}}" alt="" >
+	                  <img class="img-2" th:src="@{'/loadImage?imageName='+${item.image}}" alt="" > 
+                    <!-- Overlay -->
+                    <div class="overlay">
+                      <div class="position-center-center">
+                        <div class="inn">
+	                        <a th:href="@{'/loadImage?imageName='+${item.image}}" data-lighter data-toggle="tooltip" data-placement="top" title="Detail">
+	                        	<i class="icon-magnifier"></i>
+	                        </a>
+	                        <a th:href="@{/addToCart(productId=${item.productId})}" data-toggle="tooltip" data-placement="top" title="Add To Cart">
+	                       		<i class="icon-basket"></i>
+	                        </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item Name -->
+                  <div class="item-name"> <a th:href="@{/productDetail(id=${item.productId})}">[[${item.name}]]</a>
+                    <p>Lorem ipsum dolor sit amet</p>
+                  </div>
+                  <!-- Price --> 
+                  <span class="price">
+                  
+                  <small>$</small><span style="text-decoration: line-through black; color: gray;">[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}]]</span> -
+                  
+                  <!-- price - discount -->
+                  <small>$</small>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}]]
+                  </span>
+                </div>
+              </div>
+            
+            <ul class="pagination in-center">
+				<li class="page-item" th:if="${productList.totalPages > 0}"
+					th:each="pageNumber : ${pageNumbers}">
+					<a
+						th:href="@{/products(size=${productList.size}, page=${pageNumber})}"
+						th:text=${pageNumber}
+						th:class="${pageNumber==productList.number + 1} ? active"
+						class="page-link">
+					</a>
+				</li>
+			</ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>about PAVSHOP</h4>
+          <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla lacinia,
+            eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+        </div>
+        
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="https://web.facebook.com/messages/t/100079330042377"><i class="icon-social-facebook"></i></a></li>
+        </ul>
+      </div>
+    </section>
+    
+   
+  </div>
+  
+  <!--======= FOOTER =========-->
+  <footer th:replace="~{/site/fragments/footer :: footer}"></footer>
+  
+  <!--======= RIGHTS =========--> 
+  
+</div>
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/own-menu.js"></script> 
+<script src="js/jquery.lighter.js"></script> 
+<script src="js/owl.carousel.min.js"></script> 
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="rs-plugin/js/jquery.tp.t.min.js"></script> 
+<script type="text/javascript" src="rs-plugin/js/jquery.tp.min.js"></script> 
+<script src="js/main.js"></script> 
+<script src="js/main.js"></script>
+</body>
+</html>

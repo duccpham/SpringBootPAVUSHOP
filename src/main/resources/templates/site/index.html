@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="M_Adnan">
+<title>PAVSHOP</title>
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/ionicons.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<!-- JavaScripts -->
+<script src="js/modernizr.js"></script>
+
+<!-- Online Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="position-center-center">
+    <div class="ldr"></div>
+  </div>
+</div>
+
+<!-- Wrap -->
+<div id="wrap"> 
+  
+  <!-- header -->
+  <header th:replace="~{/site/fragments/header :: header}"></header>
+  
+  <!--======= HOME MAIN SLIDER =========-->
+  <section class="home-slider"> 
+    
+    <!-- SLIDE Start -->
+    <div class="tp-banner-container">
+      <div class="tp-banner">
+        <ul>
+          <!-- SLIDE  -->
+          <li data-transition="random" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" > 
+            <!-- MAIN IMAGE --> 
+            <img src="images/slide-bg-1.jpg"  alt="slider"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+            <!-- LAYERS --> 
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption font-playfair sfb tp-resizeme" 
+                data-x="left" data-hoffset="0" 
+                data-y="center" data-voffset="-200" 
+                data-speed="800" 
+                data-start="500" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 7; font-size:18px; color:#fff; max-width: auto; max-height: auto; white-space: nowrap;">The Latest Product from PAVSHOP</div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfl font-extra-bold tp-resizeme" 
+                data-x="left" data-hoffset="0" 
+                data-y="center" data-voffset="-120" 
+                data-speed="800" 
+                data-start="800" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:80px; color:#2d3a4b; text-transform:uppercase; white-space: nowrap;"><small class="font-regular">$</small>299 </div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfr font-extra-bold tp-resizeme" 
+                data-x="left" data-hoffset="0" 
+                data-y="center" data-voffset="0" 
+                data-speed="800" 
+                data-start="800" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="chars" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:120px; color:#fff; text-transform:uppercase; white-space: nowrap;">featured </div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfr font-extra-bold tp-resizeme" 
+                data-x="left" data-hoffset="0" 
+                data-y="center" data-voffset="110" 
+                data-speed="800" 
+                data-start="1300" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="chars" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:120px; color:#fff; text-transform:uppercase; white-space: nowrap;">cycle </div>
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption lfb tp-resizeme" 
+                data-x="left" data-hoffset="0" 
+                data-y="center" data-voffset="240" 
+                data-speed="800" 
+                data-start="2200" 
+                data-easing="Power3.easeInOut" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-scrolloffset="0"
+                style="z-index: 8;"><a href="#." class="btn">SHOP NOW</a> </div>
+          </li>
+          
+          <!-- SLIDE  -->
+          <li data-transition="random" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" > 
+            <!-- MAIN IMAGE --> 
+            <img src="images/slide-bg-2.jpg"  alt="slider"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+            <!-- LAYERS --> 
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption font-playfair sfb tp-resizeme" 
+                data-x="center" data-hoffset="0" 
+                data-y="center" data-voffset="-150" 
+                data-speed="800" 
+                data-start="500" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 7; font-size:18px; color:#fff; max-width: auto; max-height: auto; white-space: nowrap;">The Latest Product from PAVSHOP</div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfr font-regular tp-resizeme letter-space-4" 
+                data-x="center" data-hoffset="0" 
+                data-y="center" data-voffset="-50" 
+                data-speed="800" 
+                data-start="800" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="chars" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:78px; color:#fff; text-transform:uppercase; white-space: nowrap;">look beautiful </div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4" 
+                data-x="center" data-hoffset="0" 
+                data-y="center" data-voffset="60" 
+                data-speed="800" 
+                data-start="1300" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="chars" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:140px; color:#fff; text-transform:uppercase; white-space: nowrap;">this season </div>
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption sfb font-extra-bold tp-resizeme" 
+                data-x="center" data-hoffset="120"
+                data-y="center" data-voffset="200"
+                data-speed="800" 
+                data-start="2200" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:60px; color:#fff; text-transform:uppercase; white-space: nowrap;"><small class="font-regular">$</small> 299 </div>
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption lfb tp-scrollbelowslider tp-resizeme" 
+                data-x="center" data-hoffset="-120" 
+                data-y="center" data-voffset="200" 
+                data-speed="800" 
+                data-start="2200" 
+                data-easing="Power3.easeInOut" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-scrolloffset="0"
+                style="z-index: 8;"><a href="#." class="btn">BUY NOW</a> </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- New Arrival -->
+    <section class="padding-top-100 padding-bottom-100">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>new arrival</h4>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</span> </div>
+      </div>
+      
+      <!-- New Arrival -->
+      <div class="arrival-block"> 
+        
+        <!-- Item -->
+        <div class="item" id="loadProduct" th:each="item : ${productList}"> 
+          <!-- Images --> 
+          <img class="img-1" th:src="@{'/loadImage?imageName='+${item.image}}" alt="">
+          <img class="img-2" th:src="@{'/loadImage?imageName='+${item.image}}" alt=""> 
+          <!-- Overlay  -->
+          <div class="overlay"> 
+            <!-- Price --> 
+            <span class="price"><small>$</small>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}]]</span>
+            <div class="position-center-center">
+	            <a th:href="@{'/loadImage?imageName='+${item.image}}" data-lighter>
+	            	<i class="icon-magnifier"></i>
+	            </a>
+            </div>
+          </div>
+          <!-- Item Name -->
+          <div class="item-name">
+          	<a th:href="@{/productDetail(id=${item.productId})}">[[${item.name}]]</a>
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Popular Products -->
+    <section class="padding-top-50 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>popular products</h4>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</span> </div>
+        
+        <!-- Popular Item Slide -->
+        <div class="papular-block block-slide"> 
+          
+          <!-- Item -->
+          <div class="item" th:each="item : ${topOrderList}"> 
+            <!-- Item img -->
+            <div class="item-img">
+	            <img class="img-1" th:src="@{'/loadImage?imageName='+${item[1]}}" alt="" >
+	            <img class="img-2" th:src="@{'/loadImage?imageName='+${item[1]}}" alt="" > 
+              <!-- Overlay -->
+              <div class="overlay">
+                <div class="position-center-center">
+                  <div class="inn">
+                  <a th:href="@{'/loadImage?imageName='+${item[1]}}" data-lighter data-toggle="tooltip" data-placement="top" title="Detail">
+                  	<i class="icon-magnifier"></i>
+                  </a>
+                  <a th:href="@{/addToCart(productId=${item[2]})}" data-toggle="tooltip" data-placement="top" title="Add To Cart">
+                  	<i class="icon-basket"></i>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Item Name -->
+            <div class="item-name">
+              <a href="#.">[[${item[0]}]]</a>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <!-- Price --> 
+            <span class="price"><small>$</small>[[${#numbers.formatDecimal(item[4] - (item[4] * item[5]/100), 1, 'DEFAULT', 0, 'DEFAULT')}]]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>about PAVSHOP</h4>
+          <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla lacinia,
+            eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+        </div>
+        
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="https://web.facebook.com/messages/t/100079330042377"><i class="icon-social-facebook"></i></a></li>
+         
+        </ul>
+      </div>
+    </section>
+  </div>
+  
+  <!--======= FOOTER =========-->
+  <footer th:replace="~{/site/fragments/footer :: footer}"></footer>
+  
+  <!--======= RIGHTS =========--> 
+  
+</div>
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/own-menu.js"></script> 
+<script src="js/jquery.lighter.js"></script> 
+<script src="js/owl.carousel.min.js"></script> 
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="rs-plugin/js/jquery.tp.t.min.js"></script> 
+<script type="text/javascript" src="rs-plugin/js/jquery.tp.min.js"></script> 
+<script src="js/main.js"></script> 
+<script src="js/main.js"></script>
+</body>
+</html>
